@@ -7,7 +7,7 @@ declare var confirm: (question: string) => boolean
 interface ModalProps {
     showModal: boolean;
     setShowModal: () => void;
-    setNewTimeAndDate: () => void;
+    setNewTimeAndDate: (date: string, time: string) => void;
 }
 
 const Modal: FC<ModalProps> = ({ showModal, setShowModal, setNewTimeAndDate }) => {
@@ -15,11 +15,11 @@ const Modal: FC<ModalProps> = ({ showModal, setShowModal, setNewTimeAndDate }) =
     const [date, setDate] = useState<string>('');
     const [time, setTime] = useState<string>('');
 
-    const changeDate = (event: React.MouseEvent<HTMLInputElement>) => {
+    const changeDate = (event: React.ChangeEvent<HTMLInputElement>) => {
         setDate(event.target.value)
     }
 
-    const changeTime = (event: React.MouseEvent<HTMLInputElement>) => {
+    const changeTime = (event: React.ChangeEvent<HTMLInputElement>) => {
         setTime(event.target.value)
     }
 

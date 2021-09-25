@@ -47,12 +47,12 @@ const App: FC = () => {
     const newItem = { ...old, deadLineData: date, deadLineTime: time };
     const newArr = [...todos.slice(0, index), newItem, ...todos.slice(index + 1)];
     setTodos(newArr);
-    setdateId();
+    setdateId(undefined);
   }
 
 
 
-  //Add LocalStorage 
+  //Add LocalStorage
 
   // useEffect(() => {
   //   const saved = JSON.parse(localStorage.getItem('todos') || '[]') as Todo[];

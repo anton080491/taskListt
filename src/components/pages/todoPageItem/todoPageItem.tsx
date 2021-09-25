@@ -5,7 +5,7 @@ import './todoPageItem.css';
 
 
 interface TodoPageItemProps {
-    todo: Todo;
+    todo: Todo | undefined;
     changeTodo: (id: number) => void;
     changeDoing: (id: number) => void;
     changeDone: (id: number) => void;
