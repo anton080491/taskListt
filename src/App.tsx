@@ -52,7 +52,7 @@ const App: FC = () => {
 
 
 
-  //Add LocalStorage 
+  //Add LocalStorage
 
   // useEffect(() => {
   //   const saved = JSON.parse(localStorage.getItem('todos') || '[]') as Todo[];
